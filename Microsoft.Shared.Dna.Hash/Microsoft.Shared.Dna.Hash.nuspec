@@ -4,13 +4,12 @@
     <id>Microsoft.Shared.Dna.Hash</id>
     <version>1.0.0</version>
     <title>Microsoft Data and Analytics Shared Code - Hash Algorithms</title>
-    <authors>Microsoft,microsoft-shared-dna</authors>
-    <owners>Microsoft,microsoft-shared-dna</owners>
+    <authors>Microsoft</authors>
     <description>Do you need a simple non-cryptograhic hash algorithm? Do you not want to rely on Hash64()? Do you want to run a hash in a tight loop with low allocation overhead? If so, then this package might be right for you.</description>
     <summary>Microsoft Data and Analytics shared hash algorithms for big data applications.</summary>
     <projectUrl>https://github.com/Microsoft/Microsoft.Shared.Dna.Hash</projectUrl>
     <licenseUrl>https://github.com/Microsoft/Microsoft.Shared.Dna.Hash/blob/master/LICENSE.txt</licenseUrl>
-    <copyright>Microsoft Corporation</copyright>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>microsoft telemetry map-reduce big data hash</tags>
     <developmentDependency>true</developmentDependency>
