@@ -1,12 +1,12 @@
-Microsoft Data and Analytics Shared Code - Hash Functions
-=========================================================
+Microsoft Data and Analytics Shared Code - Hash Algorithms
+==========================================================
 Do you need a simple non-cryptograhic hash algorithm?  
-Do you not want to rely on the internals GetHashCode()?  
+Do you not want to rely on the internals of GetHashCode()?  
 Do you want to run a hash in a tight loop with low allocation overhead?  
-  
+
 If so, then this package might be right for you.  
 
-The Windows team is building it's own high-performance, low-allocation hash algorithms for processing data in various "big data" systems. We've managed to squeeze some pretty astonishing performance out of our implementation. Since it wasn't tightly coupled to anything either, we thought we'd share the goodness with everyone.
+The Data and Analytics team is building it's own high-performance, low-allocation hash algorithms for processing data in various "big data" systems. We've managed to squeeze some pretty astonishing performance out of our implementation. Since it wasn't tightly coupled to anything either, we thought we'd share the goodness with everyone.
 
 We're sharing our code as NuGet "recipe" packages. That means that instead of adding a DLL reference to your code, we're adding the source files themselves. Everything we add is internal and therefore scoped only to that assembly. So, you can freely add this to as many projects as you like without fear of conflicts. We do this for a few reasons:
 
