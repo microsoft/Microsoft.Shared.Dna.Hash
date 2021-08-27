@@ -2,8 +2,10 @@
 SETLOCAL
 PUSHD "%~dp0"
 IF NOT EXIST .tools CALL init.cmd
-IF NOT DEFINED VS140COMNTOOLS GOTO NEEDVS
-IF NOT DEFINED DevEnvDir CALL "%VS140COMNTOOLS%\VsDevCmd.bat"
+msbuild -help >NUL 2>&1
+IF ERRORLEVEL 9009 GOTO NEEDVS
+vstest.console -? >NUL 2>&1
+IF ERRORLEVEL 9009 GOTO NEEDVS
 .tools\nuget restore
 msbuild build.proj /verbosity:n /clp:ShowCommandLine /m:%NUMBER_OF_PROCESSORS% /nr:false /fl /flp:LogFile=MSBuild.log;Verbosity=diag;ShowTimestamp
 FOR %%I IN (Debug Release) DO (
@@ -13,7 +15,7 @@ FOR %%I IN (Debug Release) DO (
 )
 GOTO END
 :NEEDVS
-ECHO Install Visual Studio 2017 to build.
+ECHO Run %~nx0 from a Visual Studio developer command prompt.
 GOTO END
 :END
 POPD
